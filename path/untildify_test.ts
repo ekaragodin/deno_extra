@@ -1,9 +1,8 @@
-import { test } from "https://deno.land/std/testing/mod.ts";
-import {
-  assertNotEquals,
-  assertEquals
-} from "https://deno.land/std/testing/asserts.ts";
+import { testing, asserts } from '../deps.ts';
 import { untildify } from "./untildify.ts";
+
+const { test } = testing;
+const { assertNotEquals, assertEquals } = asserts;
 
 test(function replaceTilde() {
   assertNotEquals(untildify("~"), "~");

@@ -1,6 +1,6 @@
 #!/usr/bin/env deno --allow-all
 
-import { runIfMain } from "https://deno.land/std/testing/mod.ts";
+import { testing } from './deps.ts';
 import "./path/test.ts";
 
-runIfMain(import.meta);
+testing.runIfMain(import.meta);
