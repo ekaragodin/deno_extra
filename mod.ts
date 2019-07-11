@@ -1,1 +1,3 @@
-export * from "./path/mod.ts";
+import * as path from "./path/mod.ts";
+
+export { path }
