@@ -1,6 +1,7 @@
 # Deno Extra Modules
 
 [![Build Status](https://travis-ci.com/ekaragodin/deno_extra.svg?branch=master)](https://travis-ci.com/ekaragodin/deno_extra)
+[![License](https://img.shields.io/github/license/ekaragodin/deno_extra.svg)](https://github.com/ekaragodin/deno_extra)
 
 These modules do not have external dependencies except Deno standard modules.
 
