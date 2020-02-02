@@ -1,4 +1,4 @@
-import { testing, asserts } from '../deps.ts';
+import { testing, asserts } from "../deps.ts";
 import { untildify } from "./untildify.ts";
 
 const { test } = testing;
