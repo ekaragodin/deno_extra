@@ -1,4 +1,4 @@
-#!/usr/bin/env deno --allow-all
+#!/usr/bin/env -S deno --allow-all
 
 import { testing } from "./deps.ts";
 import "./path/test.ts";
