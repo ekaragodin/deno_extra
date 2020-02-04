@@ -19,6 +19,18 @@ import { untildify } from "https://denopkg.com/ekaragodin/deno_extra@v1.0.1/path
 untildify("~/src"); // /Users/ekaragodin/src
 ```
 
+### process
+
+#### exec
+
+Spawns a shell and runs a command within that shell. Requires acces to Env on Windows.
+
+```ts
+import { exec } from "https://denopkg.com/ekaragodin/deno_extra@v1.0.1/process/mod.ts";
+
+exec('ls -l');
+```
+
 ## Contributing
 
 Follow the [style guide](https://deno.land/style_guide.html).
