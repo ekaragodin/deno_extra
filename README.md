@@ -14,7 +14,7 @@ These modules do not have external dependencies except Deno standard modules.
 Convert a tilde path to an absolute path.
 
 ```ts
-import { untildify } from "https://denopkg.com/ekaragodin/deno_extra@v1.0.1/path/mod.ts";
+import { untildify } from "https://denopkg.com/ekaragodin/deno_extra@v1.1.0/path/mod.ts";
 
 untildify("~/src"); // /Users/ekaragodin/src
 ```
@@ -26,7 +26,7 @@ untildify("~/src"); // /Users/ekaragodin/src
 Spawns a shell and runs a command within that shell. Requires acces to Env on Windows.
 
 ```ts
-import { exec } from "https://denopkg.com/ekaragodin/deno_extra@v1.0.1/process/mod.ts";
+import { exec } from "https://denopkg.com/ekaragodin/deno_extra@v1.1.0/process/mod.ts";
 
 exec('ls -l');
 ```
