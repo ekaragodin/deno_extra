@@ -1,10 +1,9 @@
-import { testing, asserts } from "../deps.ts";
+import { asserts } from "../deps.ts";
 import { exec } from "./mod.ts";
 
-const { test } = testing;
 const { assertEquals } = asserts;
 
-test(async function execEcho() {
+Deno.test("execEcho", async function () {
   const process = exec("echo qwe", {
     stdout: "piped",
     stderr: "piped",
@@ -18,4 +17,6 @@ test(async function execEcho() {
 
   const stderrOutput = await process.stderrOutput();
   assertEquals(new TextDecoder().decode(stderrOutput), "");
+
+  process.close();
 });

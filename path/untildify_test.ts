@@ -1,15 +1,14 @@
-import { testing, asserts } from "../deps.ts";
+import { asserts } from "../deps.ts";
 import { untildify } from "./untildify.ts";
 
-const { test } = testing;
 const { assertNotEquals, assertEquals } = asserts;
 
-test(function replaceTilde() {
+Deno.test("replaceTilde", function () {
   assertNotEquals(untildify("~"), "~");
   assertNotEquals(untildify("~/test"), "~/test");
 });
 
-test(function keepTilde() {
+Deno.test("keepTilde", function () {
   assertEquals(untildify("~test"), "~test");
   assertEquals(untildify("~abc"), "~abc");
   assertEquals(untildify("/~"), "/~");

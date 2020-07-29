@@ -1,12 +1,12 @@
 export function getShell(): string[] {
-  if (Deno.build.os === "win") {
-    return [Deno.env().ComSpec || "cmd.exe", "/d", "/s", "/c"];
+  if (Deno.build.os === "windows") {
+    return [Deno.env.get("ComSpec") || "cmd.exe", "/d", "/s", "/c"];
   }
 
   return ["/bin/sh", "-c"];
 }
 
-type ExecOptions = Omit<Deno.RunOptions, "args">;
+type ExecOptions = Omit<Deno.RunOptions, "cmd">;
 
 /**
  * Spawns a shell and runs a command within that shell. Requires acces to Env on Windows.
@@ -17,6 +17,6 @@ type ExecOptions = Omit<Deno.RunOptions, "args">;
 export function exec(command: string, options?: ExecOptions) {
   return Deno.run({
     ...options,
-    args: [...getShell(), command]
+    cmd: [...getShell(), command],
   });
 }

@@ -1,10 +1,8 @@
-function homeDir() {
-  // compat for versions below 0.27
-  return (Deno as any).homeDir ? (Deno as any).homeDir : Deno.dir("home");
-}
+import { homeDir } from "../os/mod.ts";
 
 /**
  * Convert a tilde path to an absolute path: ~/src -> /Users/ekaragodin/src.
+ * Requires allow-env permission.
  *
  * @param path
  */

@@ -7,11 +7,21 @@ These modules do not have external dependencies except Deno standard modules.
 
 ## Documentation
 
+### os
+
+#### homeDir
+
+```ts
+import { homeDir } from "https://denopkg.com/ekaragodin/deno_extra@v1.1.0/os/mod.ts";
+
+homeDir(); // /Users/ekaragodin
+```
+
 ### path
 
 #### untildify
 
-Convert a tilde path to an absolute path.
+Convert a tilde path to an absolute path. Requires allow-env permission.
 
 ```ts
 import { untildify } from "https://denopkg.com/ekaragodin/deno_extra@v1.1.0/path/mod.ts";
@@ -28,7 +38,7 @@ Spawns a shell and runs a command within that shell. Requires acces to Env on Wi
 ```ts
 import { exec } from "https://denopkg.com/ekaragodin/deno_extra@v1.1.0/process/mod.ts";
 
-exec('ls -l');
+exec("ls -l");
 ```
 
 ## Contributing
