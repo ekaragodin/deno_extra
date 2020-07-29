@@ -8,8 +8,8 @@ variables:
 
 install:
   - curl -fsSL https://deno.land/x/install/install.sh | sh -s $DENO_VERSION
-  - deno --version
   - export PATH="$HOME/.deno/bin:$PATH"
+  - deno --version
 
 script:
   - deno test --allow-all .
