@@ -1,3 +1,3 @@
-import * as asserts from "https://deno.land/std@v0.62.0/testing/asserts.ts";
+import * as asserts from "https://deno.land/std@0.77.0/testing/asserts.ts";
 
 export { asserts };
